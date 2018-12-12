@@ -4,31 +4,26 @@ from monster import Monster
 player = Monster("Laura the fearsome")
 opponent = Monster("Grumpatron")
 
-# Start game loop
-game_in_progress = True
-while game_in_progress:
+# Continue while both players are alive
+while player.is_alive() and opponent.is_alive():
 
     # Describe the HP of both players
     player.describe()
     opponent.describe()
-    input("...")
-    print("--------- oOo ---------")
+    input("> Press Enter <")
 
     # Player's attack
-    player.attack(opponent)
+    if player.is_alive():
+        player.attack(opponent)
 
-    # Monster's attack
-    if opponent.is_alive() == True:
-        opponent.attack(player)
-        if player.is_alive() == False:
-            print("YOU LOSE")
-            game_in_progress = False
-    else:
-        print("YOU WIN")
-        game_in_progress = False
+        # Monster's attack
+        if opponent.is_alive():
+            opponent.attack(player)
 
+            # Is the player now dead?
+            if player.is_alive() == False:
+                print("You lost :(")
+        else:
+            print("You win!")
 
-
-
-
-    input("...")
+    input("> Press Enter <")
