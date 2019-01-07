@@ -1,3 +1,5 @@
+from time import sleep
+
 class Monster():
   def __init__(self, monster_name):
     self.name = monster_name
@@ -13,7 +15,7 @@ class Monster():
   # Implement these yourself
   # -----------------------------------
   def describe(self):
-    """Prints the monster's name and HP (no return value)"""
+    """Prints the monster's name and HP and then waits 3 seconds (no return value)"""
     pass
 
   def is_alive(self):
@@ -29,5 +31,3 @@ class Monster():
     number from the target's HP and prints a message saying what happened
     (no return value)"""
     pass
-
-  

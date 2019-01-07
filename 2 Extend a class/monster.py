@@ -1,5 +1,5 @@
 import random
-
+from time import sleep
 class Monster():
 
     # Constructor
@@ -22,6 +22,7 @@ class Monster():
 
     def describe(self):
         print("[" + self.name +"] has " + str(self.hp) + "HP")
+        sleep(3)
 
     def is_alive(self):
         if self.hp > 0:

@@ -6,19 +6,11 @@ class Player(Monster):
     def __init__(self, monster_name):
         super().__init__(monster_name)
         self.defending = False
-        self.hp = 50    # Make a player start on a higher HP level
+        self.hp = 40    # Make a player start on a higher HP level
 
     # New defence methods
-    def defend(self, opponent):
+    def defend(self):
         self.defending = True
-        print("You throw a quick jab in your opponent's direction and then defend yourself...")
-        opponent.subtract_hp(5)
-
-    def reset_defence(self):
-        self.defending = False
-
-    def is_defending(self):
-        return self.defending
 
     # Override the subtract_hp method for a Player to allow
     # the player to defend (a Monster cannot defend)
@@ -28,6 +20,8 @@ class Player(Monster):
             hit_amount = hit_amount - 10
             if hit_amount < 0:
                 hit_amount = 0
+
+            self.defending = False  # Reset defence
 
         # Deduct the hit
         self.hp = self.hp - hit_amount
