@@ -18,10 +18,7 @@ class Player(Monster):
         if self.defending == True:
             print("Defended 10HP of damage!")
             hit_amount = hit_amount - 10
-            if hit_amount < 0:
-                hit_amount = 0
-
-            self.defending = False  # Reset defence
+            self.defending = False  # Stop defending
 
         # Deduct the hit
         self.hp = self.hp - hit_amount
