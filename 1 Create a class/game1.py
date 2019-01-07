@@ -2,7 +2,8 @@ from time import sleep
 from monster import Monster
 
 # Create monsters
-player = Monster("Poisonwoman")
+player_name = input("What is your monster called?")
+player = Player(player_name)
 bad_guy = Monster("Doombeast")
 
 # Describe the HP of both players
