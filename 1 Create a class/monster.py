@@ -11,8 +11,14 @@ class Monster():
     def get_name(self):
         return self.name
 
+    def set_name(self, new_name):
+        self.name = new_name
+
     def get_hp(self):
         return self.hp
+
+    def set_hp(self, hp_amount):
+        self.hp = hp_amount
 
     def describe(self):
         print("[" + self.name +"] has " + str(self.hp) + "HP")
