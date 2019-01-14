@@ -15,11 +15,11 @@ class Monster():
   # Implement these yourself
   # -----------------------------------
   def describe(self):
-    """Prints the monster's name and HP and then waits 3 seconds (no return value)"""
+    """Prints the monster's name and HP, then waits 3 seconds (no return value)"""
     pass
 
   def is_alive(self):
-    """Returns True if the monster is alive and False if not"""
+    """Returns True if the monster is on 1HP or more and False if not"""
     pass
 
   def subtract_hp(self, hit_amount):
@@ -27,7 +27,11 @@ class Monster():
     pass
 
   def attack(self, target):
-    """Chooses a random number for the amount of damage, subtracts that
-    number from the target's HP and prints a message saying what happened
-    (no return value)"""
+    """Chooses a random number between 10 and 30 for the amount of damage, subtracts that
+    number from the **target's** HP and prints "<monster name> got hit for <x> HP"
+    The 'target' is a Monster object (so it has the exact methods implemented here)
+    (no return value)
+
+    Extra challenge: Print the message <monster name> got hit by <monster name> for <x> HP"
+    """
     pass

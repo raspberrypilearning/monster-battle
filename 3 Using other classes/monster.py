@@ -4,7 +4,6 @@ from item import Item
 
 class Monster():
 
-    # Constructor
     def __init__(self, monster_name):
         self.name = monster_name
         self.hp = 30
@@ -12,7 +11,6 @@ class Monster():
         # Add the item attribute which creates an Item object
         self.item = Item()
 
-    # Getters and setters
     def get_name(self):
         return self.name
 

@@ -1,7 +1,7 @@
 from monster import Monster
 
 # Create monsters
-player_name = input("What is your monster called?")
+player_name = input("What is your monster called? ")
 you = Monster(player_name)
 bad_guy = Monster("Doombeast")
 
