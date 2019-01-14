@@ -13,12 +13,12 @@ class Item():
     # outside of the class itself. This notation means 'private' in Python, although
     # there is nothing to actually stop you from calling it from outside
     def _generate_random_item(self):
-        names = ["axe", "bow", "feather duster"]
+        names = ["Axe", "Bow", "Feather duster"]
         descriptions = ["A sharp chopping tool", "Fires arrows", "A tickly stick"]
         attack_values = [40, 30, 5]
         self.item_name = random.choice(names)
         self.description = descriptions[names.index(self.item_name)]
-        self.attack_value = attack_values[names.index(self.item_name)]
+        self._attack_value = attack_values[names.index(self.item_name)]
 
     # You can change the representation of the object as a string
     # so that it prints out something customised
