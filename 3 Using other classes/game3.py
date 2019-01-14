@@ -40,5 +40,3 @@ while you.is_alive() and bad_guy.is_alive():
 
         if bad_guy.is_alive() == False:
             print("You win!")
-            if bad_guy.get_hp() < 0:
-                print("OVERKILL!")

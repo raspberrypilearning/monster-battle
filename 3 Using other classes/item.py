@@ -25,6 +25,19 @@ class Item():
     def __repr__(self):
         return "Holding [" + self.item_name + "] - " + self.description + ". Attack value: " + str(self.attack_value)
 
+    # Getters and setters
+    def get_attack_value(self):
+        return self._attack_value
+
+    def set_attack_value(self, new_value):
+        self._attack_value = new_value
+
+    # Other methods
+    def describe(self):
+        print(self.item_name + " - " + self.description)
+
+
+    # FOR INFORMATION
     # This is the more Pythonic way of creating getters and setters. The getter is
     # a method labelled as a property, and then the setter is a method with the SAME NAME which is
     # labelled as the setter for that property. Then, depending on context, you can refer to
@@ -33,6 +46,7 @@ class Item():
     # CAUTION - you can't call the property method the same thing as one of the attributes!
     # The attribute is called _attack_value because it's meant to be private
     # and the method here is called attack_value
+    """
     @property
     def attack_value(self):
         return self._attack_value
@@ -40,3 +54,4 @@ class Item():
     @attack_value.setter
     def attack_value(self, new_value):
         self._attack_value = new_value
+    """
