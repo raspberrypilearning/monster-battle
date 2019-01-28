@@ -42,5 +42,5 @@ class Monster():
 
     # Change the implementation of attack so that it attacks using the item's attack value
     def attack(self, target):
-        print(">>> " + self.name + " hits " + target.get_name() + " for " + str(self.item.attack_value) +"HP" )
-        target.subtract_hp(self.item.attack_value)
+        print(">>> " + self.name + " hits " + target.get_name() + " for " + str(self.item.get_attack_value()) +"HP" )
+        target.subtract_hp(self.item.get_attack_value())
