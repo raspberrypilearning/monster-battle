@@ -22,7 +22,7 @@ class Item():
 
     # You can change the representation of the object as a string
     # so that it prints out something customised
-    def __repr__(self):
+    def __str__(self):
         return "Holding [" + self.item_name + "] - " + self.description + ". Attack value: " + str(self._attack_value)
 
     # Getters and setters
